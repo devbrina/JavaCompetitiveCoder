@@ -2,12 +2,10 @@
 
 Welcome to the JavaCompetitiveCoder repository! This project is a collection of solutions for competitive programming problems written in Java. It is designed to help you improve your problem-solving skills and prepare for programming competitions.
 
-<<<<<<< HEAD
+
 ![trophy](https://github.com/devbrina/JavaCompetitiveCoder/raw/main/trophy.jpg)
 
 
-=======
->>>>>>> 38037c7ae815cdb163684cd1530002e0437051ef
 ## Contents
 
 - [Overview](#overview)
