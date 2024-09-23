@@ -1,0 +1,61 @@
+import java.io.IOException;
+ 
+/**
+ * IMPORTANT: 
+ *      O nome da classe deve ser "Main" para que a sua solução execute
+ *      Class name must be "Main" for your solution to execute
+ *      El nombre de la clase debe ser "Main" para que su solución ejecutar
+ */
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner in = new Scanner(System.in);
+        
+        Seller seller = new Seller();
+        
+        seller.setName(in.nextLine());
+        seller.setSalary(in.nextDouble());
+        seller.setTotalSold(in.nextDouble());
+        seller.setCommissionRate(0.15);
+
+        double totalSalary = seller.calculateTotalPayment();
+        
+        System.out.printf("TOTAL = R$ %.2f\n", totalSalary);
+        
+        in.close();
+    }
+}
+
+class Seller {
+    private String name;
+    private double salary;
+    private double totalSold;
+    private double commissionRate;
+
+    // getters
+    public String getName() { return name; }
+    public double getSalary() { return salary; }
+    public double getTotalSold() { return totalSold; }
+    public double getCommissionRate() { return commissionRate; }
+
+    // setters
+    public void setName(String name) { this.name = name; }
+    public void setSalary(double salary) { this.salary = salary; }
+    public void setTotalSold(double totalSold) { this.totalSold = totalSold; }
+    
+    public void setCommissionRate(double commissionRate) {
+        if (commissionRate >= 0) {
+            this.commissionRate = commissionRate;
+        } else {
+            throw new IllegalArgumentException("Comissão inválida");
+        }
+    }
+
+    // other methods
+    public double calculateCommission() {
+        return totalSold * commissionRate;
+    }
+    public double calculateTotalPayment() {
+        return salary + calculateCommission();
+    }
+}
