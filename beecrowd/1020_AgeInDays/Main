@@ -14,8 +14,8 @@ public class Main {
         
         int age_days = input.nextInt();
         
-        int[] ageAMD = calculateAgeMonthsAndYears(age_days);
-        System.out.printf("%d ano(s)\n%d mes(es)\n%d dia(s)\n", ageAMD[0], ageAMD[1], ageAMD[2]);
+        int[] ageYMD = calculateYearsMonthsDays(age_days);
+        System.out.printf("%d ano(s)\n%d mes(es)\n%d dia(s)\n", ageYMD[0], ageYMD[1], ageYMD[2]);
     }
     
     public static int[] divide(int dividend, int divisor) {
@@ -24,7 +24,7 @@ public class Main {
         return new int[]{quotient, remainder};
     }
     
-    public static int[] calculateAgeMonthsAndYears(int age_days) {
+    public static int[] calculateYearsMonthsDays(int age_days) {
         // index 0 is quotient, index 1 is remainder
         // quotient represents the complete years, months, or days.
         // remainder is the leftover days after the division for years, months, or days.
