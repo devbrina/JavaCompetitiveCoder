@@ -27,7 +27,7 @@ Make sure you have the following software installed in your environment:
 1. Clone this repository
 bash
 ```
-git clone https://github.com/your-username/JavaCompetitiveCoder.git
+git clone https://github.com/devbrina/JavaCompetitiveCoder.git
 ```
 
 2. Navigate to the project directory:
